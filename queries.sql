@@ -18,8 +18,8 @@ SELECT first_name, last_name, hire_date
 FROM employees
 WHERE hire_date BETWEEN '1986-01-01' AND '1986-12-31';
 
--- 3. List the manager of each department with the following information: department number, department name, 
--- the manager’s employee number, last name, first name.
+-- 3. List the manager of each department with the following information: department number,
+-- department name, the manager’s employee number, last name, first name.
 SELECT de.dept_name, dm.emp_no, dm.dept_no, e.first_name, e.last_name
 FROM dept_manager as dm
 LEFT JOIN departments as de
@@ -28,7 +28,8 @@ LEFT JOIN employees as e
 ON dm.emp_no = e.emp_no
 ORDER BY e.emp_no;
 
--- 4. List the department of each employee with the following information: employee number, last name, first name, and department name.
+-- 4. List the department of each employee with the following information: employee number, 
+--last name, first name, and department name.
 SELECT de.dept_name, e.emp_no, e.first_name, e.last_name
 FROM dept_emp as dem
 LEFT JOIN departments as de
@@ -44,7 +45,8 @@ WHERE first_name = 'Hercules'
 AND last_name LIKE 'B%'
 ORDER BY last_name;
 
--- 6. List all employees in the Sales department, including their employee number, last name, first name, and department name.
+-- 6. List all employees in the Sales department, including their employee number, last name, 
+-- first name, and department name.
 SELECT de.dept_name, e.emp_no, e.first_name, e.last_name
 FROM dept_emp as dem
 LEFT JOIN departments as de
@@ -66,7 +68,8 @@ WHERE de.dept_name = 'Sales'
 OR de.dept_name = 'Development'
 ORDER BY e.emp_no;
 
--- 8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
+-- 8. In descending order, list the frequency count of employee last names, 
+-- i.e., how many employees share each last name.
 SELECT COUNT(last_name), last_name
 FROM employees
 GROUP BY last_name
