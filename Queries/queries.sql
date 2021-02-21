@@ -1,9 +1,9 @@
-COPY departments FROM '/Users/priyamittal/Public/departments.csv' DELIMITER ',' CSV HEADER;
-COPY titles FROM '/Users/priyamittal/Public/titles.csv' DELIMITER ',' CSV HEADER;
-COPY employees FROM '/Users/priyamittal/Public/employees.csv' DELIMITER ',' CSV HEADER;
-COPY salaries FROM '/Users/priyamittal/Public/salaries.csv' DELIMITER ',' CSV HEADER;
-COPY dept_emp FROM '/Users/priyamittal/Public/dept_emp.csv' DELIMITER ',' CSV HEADER;
-COPY dept_manager FROM '/Users/priyamittal/Public/dept_manager.csv' DELIMITER ',' CSV HEADER;
+SELECT * FROM departments;
+SELECT * FROM dept_emp;
+SELECT * FROM dept_manager;
+SELECT * FROM employees;
+SELECT * FROM salaries;
+SELECT * FROM titles;
 
 -- 1. List the following details of each employee: employee number, last name, first name, sex, and salary.
 SELECT emp.emp_no as "employee number", emp.first_name as "first name", 
